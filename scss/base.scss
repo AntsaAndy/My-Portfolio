@@ -1,0 +1,24 @@
+@import "variables";
+body{
+    background-color:  $secondary;
+    font-family: $font-family;
+    color: $primary;
+    overflow-x: hidden;
+    @include respond-to("mobile"){
+        overflow-x: hidden;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// Smooth scrolling
+html {
+    scroll-behavior: smooth;
+    @include respond-to("mobile") {
+        
+      }
+}

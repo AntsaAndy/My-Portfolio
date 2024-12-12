@@ -1,0 +1,33 @@
+main {
+    margin-left: $navbar-width;
+    @include respond-to("mobile"){
+        margin-left: 0;
+    }
+    @include respond-to("tablet"){
+        margin-left: 0;
+        
+    }
+
+    section {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+       
+
+        p {
+            margin-bottom: 15px;
+        }
+    }
+}
+footer{
+    margin-left: $navbar-width ;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+    @include respond-to ("tablet"){
+        margin-left: 0;
+        text-align: center;
+    }
+    
+}

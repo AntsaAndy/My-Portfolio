@@ -1,0 +1,151 @@
+
+.navbar {
+  width: $navbar-width;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  background-color: $primary;
+  padding: 20px;
+  @include box-shadow(0, 20px, 40px, 0, rgba(0, 0, 0, 0.7));
+
+  img {
+    width: 190px;
+    height: 190px;
+    border-radius: 25px;
+  }
+
+  ul {
+    list-style-type: none;
+
+    li {
+      margin-bottom: 25px;
+      margin-top: 20px;
+
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        transition: color 0.3s ease;
+        margin-top: 25px;
+
+        &:hover {
+          color: $accent;
+        }
+      }
+    }
+  }
+
+  @include respond-to("mobile") {
+    display: none !important;
+    font-size:40px;
+  }
+  @include respond-to("tablet"){
+    display: none !important;
+    font-size:40px;
+   
+  }
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: $primary;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.3s ease;
+
+  img {
+    width: 190px;
+    height: 190px;
+    border-radius: 25px;
+    margin-left: 27px;
+  }
+
+  a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: $secondary;
+    display: block;
+    transition: 0.3s ease;
+
+    &:hover {
+      color: $hover;
+    }
+  }
+
+  .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    color: $secondary;
+  }
+
+  @include respond-to("mobile") {
+    margin-left: 0;
+  }
+ 
+  @include respond-to("mobile") {
+    display: block !important;
+  }
+  @include respond-to("tablet") {
+    margin-left: 0;
+  }  
+}
+
+#main {
+  transition: margin-left 0.5s ease;
+  padding: 20px;
+
+  @include respond-to("mobile") {
+    margin-left: 0;
+    img{
+     margin-left: 240px;
+    }
+  }
+  @include respond-to("tablet") {
+    margin-left: 0;
+
+    img{
+      margin-left: 240px;
+    }
+  }  
+}
+
+#bar {
+  button.openbtn {
+    position:fixed;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: $primary;
+    color: $secondary;
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+    @include box-shadow(0, 20px, 40px, 0, rgba(0, 0, 0, 0.7));
+    &:hover {
+      background-color: $accent;
+    }
+
+    // Afficher uniquement sur mobile/tablette
+    @include respond-to("mobile") {
+      display: block;
+    }
+
+    // Masquer sur desktop
+    @include respond-to("desktop") {
+      display: none;
+    }
+  }
+}
+
+ 

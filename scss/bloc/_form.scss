@@ -1,0 +1,30 @@
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+   
+
+    input, textarea {
+        margin-bottom: 15px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+    }
+
+    textarea {
+        height: 150px;
+    }
+
+    button {
+        background-color: $accent;
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: darken($accent, 10%);
+        }
+    }
+}

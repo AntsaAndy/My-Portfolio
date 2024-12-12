@@ -1,0 +1,87 @@
+.skills-section{ 
+    background-color: $hover;
+    @include respond-to ("tablet"){
+        font-size: 45px;
+
+      }
+    .skills-title{
+       margin-top: 85px;
+    }
+    .skills-container{ 
+    padding: 30px;
+    margin-top: -150px;
+    margin-bottom: -100px;
+     @include respond-to ("tablet"){
+            font-size: 45px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+          }
+  .skill-category {
+    margin: 20px auto;
+  }
+
+  .skill-icons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        list-style-type: none;
+        justify-content: center;
+      .skill-item {
+          display: flex;
+          background-color:$secondary;
+          flex-direction: column; 
+          width: 380px; 
+          height: 80px;
+          border:solid ;
+          border-color: transparent;
+          border-radius: 18px;
+          padding: 10px;
+          transition: transform 0.5s ease;
+          &:hover {
+            transform: scale(1.1);
+            background-color:$hover;
+            border-color: $accent;
+        }
+        @include respond-to ("tablet"){
+            font-size: 45px;
+
+          }
+        
+      }
+
+      .skill-icon {
+          width: 50px;
+          height: 50px;
+          margin-bottom: 10px;
+         
+        
+         
+      }
+
+      .skill-name {
+          font-size: 18px;
+          color: #333;
+          font-weight: bold;
+          margin-top: -40px;
+          margin-left: 75px;
+          
+      }
+      
+    }
+    }
+    .call-to-action{
+        font-weight: bold;
+        .cta-title{
+          margin-top: -15px;
+          margin-bottom: 45px;
+          color:$accent;
+          @include respond-to ("tablet"){
+            font-size: 45px;
+          }
+        }
+        &:hover{
+          transform: translateY(-10px);
+          @include transition(transform, 0.5s, ease);
+        }
+      }
+}

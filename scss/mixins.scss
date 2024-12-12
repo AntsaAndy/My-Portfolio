@@ -1,0 +1,36 @@
+@mixin fontsizecolor($fs , $lh, $fw , $color , $isUppercase :false) {
+    
+}
+@mixin box-shadow($x: 0, $y: 10px, $blur: 20px, $spread: 0, $color: rgba(74, 101, 114, 0.4)) {
+    box-shadow: $x $y $blur $spread $color;
+  }
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+ @mixin transition($property, $duration, $ease) {
+    transition: $property $duration $ease;
+  }
+
+
+
+
+// Mixin pour les breakpoints 
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == "mobile" {
+    @media (max-width: $mobile) { @content; }
+  }
+  @else if $breakpoint == "tablet" {
+    @media (max-width: $tablet) { @content; }
+  }
+  @else if $breakpoint == "large" {
+    @media (max-width: $large) { @content; }
+  }
+  @else if $breakpoint == "desktop" {
+    @media (min-width: $desktops) { @content; }
+  }
+}
+  

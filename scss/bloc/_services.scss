@@ -1,0 +1,58 @@
+.services-section {
+    padding: 20px;
+   
+    .services-title{
+        margin-bottom: 40px;
+    }
+    .services-list{
+        list-style-type: none;
+        display:grid;
+        grid-template-columns:repeat(auto-fill, minmax(310px, 1fr));
+        gap:30px;
+        padding: 15px;
+        
+        .services-item {
+            color: $secondary;
+            padding: 5px 10px;
+            border-radius: 25px;
+            border:2px ;
+            background-color: $accent;
+            width: 400px;
+            transition: background-color ease 0.5s ;
+            @include box-shadow(0, 20px, 40px, 0, rgba(0, 0, 0, 0.7));
+            
+            .services-icon{
+                font-size: 35px;
+                display: block;
+                margin-left: 170px;
+                margin-top: 15px;
+            }
+            .services-text{
+                font-size: 25px;
+                text-align: center;
+                margin-bottom: 15px;
+                @include respond-to ("tablet"){
+                    font-size: 20px;
+                    margin-top: -15px;
+                  }
+             }
+            .services-content{
+                @include respond-to ("tablet"){
+                    font-size: 18px;
+                  }
+            }
+             &:hover{
+                background-color: $hover;
+                color: $primary;
+                transform: translateY(-10px);
+                @include transition(transform, 0.2s, ease);
+                @include box-shadow(0, 20px, 40px, 0, rgba(0, 0, 0, 0.7));
+             }
+        }
+    }
+    @include respond-to ("tablet"){
+        font-size: 45px;
+        justify-content: center;
+        align-items: center;
+      }
+}
