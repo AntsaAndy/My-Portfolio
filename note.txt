@@ -1,0 +1,50 @@
+.skills-section {
+    color: $secondary;
+    background-color: $hover;
+    .skills-title {
+      color: $primary;
+      margin-bottom: 20px;
+    }
+    .skills-container {
+        
+      .skill-category {
+        .skill-icons {
+            margin: 35px;
+            p{
+              color: $primary;
+            }
+          .skill-icon {
+            padding: 15px;
+            border-radius: 12px;
+            width: 150px;
+            height: 90px;
+            object-fit: contain;
+            margin-left: 30px;
+            @include respond-to("tablet"){
+              width: 100px;
+            }
+            &:hover {
+              transform: scale(1.3);
+              @include transition(transform, 0.5s, ease);
+            }
+          }
+        }
+  
+        
+      }
+    }
+  .call-to-action{
+    font-weight: bold;
+    .cta-title{
+      margin-top: 25px;
+      color:$accent;
+      @include respond-to ("tablet"){
+        font-size: 45px;
+      }
+    }
+    &:hover{
+      transform: translateY(-10px);
+      @include transition(transform, 0.5s, ease);
+    }
+  }
+}

@@ -20,12 +20,19 @@
             width: 400px;
             transition: background-color ease 0.5s ;
             @include box-shadow(0, 20px, 40px, 0, rgba(0, 0, 0, 0.7));
-            
+            @include respond-to ("mobile"){
+                width: 300px;
+                margin-left: 10px;
+            }
             .services-icon{
                 font-size: 35px;
                 display: block;
                 margin-left: 170px;
                 margin-top: 15px;
+                @include respond-to ("mobile"){
+                    font-size: 25px;
+                    margin-left:130px;
+                }
             }
             .services-text{
                 font-size: 25px;
@@ -35,10 +42,17 @@
                     font-size: 20px;
                     margin-top: -15px;
                   }
+                @include respond-to ("mobile"){
+                    font-size: 16px;
+                  }
              }
             .services-content{
                 @include respond-to ("tablet"){
                     font-size: 18px;
+                  }
+                  @include respond-to ("mobile"){
+                    font-size: 16px;
+
                   }
             }
              &:hover{
@@ -54,5 +68,6 @@
         font-size: 45px;
         justify-content: center;
         align-items: center;
-      }
+    }
+    
 }

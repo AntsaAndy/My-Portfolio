@@ -1,23 +1,34 @@
 .custom-button-container {
     position: relative;
-    display: inline-block;
+    display: flex;
+    justify-content: flex-start; 
     margin-top: 50px;
-    margin-left:$navbar-width;
-    @include respond-to("tablet"){
-      margin-left:150px ;
-  }
+    margin-left: $navbar-width;
+
+    @include respond-to("tablet") {
+        justify-content: center; 
+        margin-left: 0; 
+    }
+
+    @include respond-to("mobile") {
+        margin-left: 0;
+        justify-content: center; 
+    }
+
     .custom-button-btn {
       padding: 12px 25px;
       font-size: 18px;
       font-weight: bold;
-      color:$secondary;
       background-color: $primary;
       border: none;
       border-radius: 32px;
       cursor: pointer;
       transition: background-color 0.3s ease;
       box-shadow: 0 8px 15px rgba(74, 101, 114, 0.3);
-
+      a{
+        text-decoration: none;
+        color:$secondary;
+      }
   
       &:hover {
         background-color: $accent;

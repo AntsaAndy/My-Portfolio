@@ -1,4 +1,36 @@
 .home-section {
+  background-image: url("../image/Desktop - 1.png");
+  background-size:1350px 785px;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; 
+  width: 100%; 
+  @include respond-to("tablet") {
+   background: none ;
+   .home-title{
+    font-size: 50px;
+   }
+   .home-subtitle{
+    font-size: 40px;
+   }
+   
+   }
+   
+  @include respond-to("mobile") {
+   background: none;
+   .home-title{
+    font-size: 40px;
+   }
+   .home-subtitle{
+    font-size: 30px;
+   }
+   p.home-description{
+    font-size: 20px;
+   }
+   .contact-links1 {
+    gap: 0px;
+   }
+  }
     @include flex-center;
     flex-direction: column;
     height: 100vh;
@@ -22,7 +54,7 @@
       line-height: 1.5;
       font-size: 25px;  
     }
-    .contact-links{
+    .contact-links1{
       display: flex; 
       margin-top: -350px;
       margin-bottom:-400px;

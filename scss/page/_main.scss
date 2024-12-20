@@ -29,5 +29,10 @@ footer{
         margin-left: 0;
         text-align: center;
     }
+    @include respond-to ("mobile"){
+        margin-left: 0;
+        text-align: center;
+        font-size: 18px
+    }
     
 }

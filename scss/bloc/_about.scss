@@ -30,6 +30,9 @@
         @include respond-to("mobile"){
             margin-left: 0;
             margin-top: 25px;
+            ul li {
+                font-size: 16px;
+            }
         } 
         @include respond-to("tablet"){
             margin-left: 0;
@@ -53,6 +56,16 @@
             p{
                 font-size: 18px;
             }
+        }
+        @include respond-to("mobile"){
+            margin-left: -25px;
+            margin-top: 30px;
+            padding: 15px;
+            width: 400px;
+            p{
+                font-size: 16px;
+            }
+            
         }
     }
 }
